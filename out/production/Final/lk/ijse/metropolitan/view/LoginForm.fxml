@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogin" prefHeight="722.0" prefWidth="1366.0" styleClass="whiteBackground" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.LoginFormController">
+   <children>
+      <Pane layoutX="1.0" layoutY="-3.0" prefHeight="734.0" prefWidth="674.0" styleClass="backgroundcolor">
+         <children>
+            <ImageView blendMode="DIFFERENCE" fitHeight="150.0" fitWidth="200.0" layoutX="217.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logos/download.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="245.0" layoutY="201.0" opacity="0.76" text="metropolitan" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label layoutX="98.0" layoutY="240.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="METROPOLITAN" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="50.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <Label layoutX="101.0" layoutY="298.0" prefHeight="74.0" prefWidth="451.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="TECHNOLOGIES" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="50.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <Separator layoutX="670.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="734.0" prefWidth="13.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css">
+         <styleClass>
+            <String fx:value="borderColour" />
+            <String fx:value="backgroundcolor" />
+         </styleClass></Separator>
+      <Label layoutX="114.0" layoutY="369.0" prefHeight="35.0" prefWidth="334.0" text="Make Every Dream PC Real..." textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUName" layoutX="962.0" layoutY="302.0" onAction="#validateUsernameOnAction" onInputMethodTextChanged="#usernameChanged" prefHeight="25.0" prefWidth="273.0" promptText="username" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label layoutX="831.0" layoutY="307.0" text="Username">
+         <font>
+            <Font name="Yu Gothic Medium" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="831.0" layoutY="370.0" text="Password">
+         <font>
+            <Font name="Yu Gothic Medium" size="15.0" />
+         </font>
+      </Label>
+       <PasswordField fx:id="txtPass" layoutX="964.0" layoutY="369.0" onAction="#validatePasswordOnAction" onInputMethodTextChanged="#passwordChanged" prefHeight="25.0" prefWidth="273.0" promptText="password" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></PasswordField>
+      <Label fx:id="lblInvalidUN" layoutX="962.0" layoutY="344.0" textFill="RED" />
+      <Label fx:id="lblInvalidPass" layoutX="965.0" layoutY="438.0" textFill="RED" />
+       <Button fx:id="btnLogin" layoutX="1173.0" layoutY="406.0" mnemonicParsing="false" onAction="#loginOnAction" onMouseEntered="#colourOnMouseEnter" prefHeight="37.0" prefWidth="64.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="Login" textAlignment="CENTER">
+           <font>
+               <Font name="System Bold" size="12.0" />
+           </font>
+         <styleClass>
+            <String fx:value="textField" />
+            <String fx:value="specialTextColour" />
+            <String fx:value="my-btn-class" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+       </Button>
+      <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="1202.0" layoutY="299.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons/icons8-blur-ios-16-filled/icons8-blur-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="1207.0" layoutY="369.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/icons/icons8-sign-in-form-password-ios-16-filled/icons8-sign-in-form-password-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="980.0" layoutY="223.0" prefHeight="59.0" prefWidth="250.0" styleClass="specialTextColour" text="Hello Again!">
+         <font>
+            <Font name="Arial Bold Italic" size="40.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="TWO_PASS_BOX" height="0.0" radius="0.0" width="0.0" />
+         </effect>
+      </Label>
+      <Label layoutX="256.0" layoutY="480.0" prefHeight="25.0" prefWidth="141.0" text="Find Out More On" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="fbIcon" fitHeight="48.0" fitWidth="48.0" layoutX="211.0" layoutY="519.0" onDragDetected="#fbOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logos/icons8-facebook-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="whatsappIcon" fitHeight="48.0" fitWidth="48.0" layoutX="295.0" layoutY="519.0" onDragDetected="#whatsappOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logos/icons8-whatsapp-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="instaIcon" fitHeight="48.0" fitWidth="48.0" layoutX="376.0" layoutY="519.0" onDragDetected="#instaOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logos/icons8-instagram-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="66.0" layoutX="1075.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logos/user.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="837.0" layoutY="535.0" text="To SIgn Up New User =&gt;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSignUp" layoutX="1175.0" layoutY="529.0" mnemonicParsing="false" onAction="#signUpAction" onMouseEntered="#colourOnMouseEnter" prefHeight="37.0" prefWidth="64.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <styleClass>
+            <String fx:value="textField" />
+            <String fx:value="specialTextColour" />
+            <String fx:value="my-btn-class" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

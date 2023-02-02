@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneSalary" prefHeight="722.0" prefWidth="1166.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.SalaryFormController">
+   <children>
+      <TextField fx:id="txtSalID" layoutX="272.0" layoutY="114.0" prefHeight="27.0" prefWidth="255.0" promptText="SalID" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css">
+         <styleClass>
+            <String fx:value="borderCurve" />
+            <String fx:value="transparency" />
+            <String fx:value="borderColour" />
+         </styleClass></TextField>
+      <TextField fx:id="txtDesignation" layoutX="272.0" layoutY="267.0" prefHeight="25.0" prefWidth="254.0" promptText="Designation" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" />
+      <TextField fx:id="txtSalary" layoutX="274.0" layoutY="312.0" prefHeight="25.0" prefWidth="254.0" promptText="Salary" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" />
+      <Button fx:id="btnSave" layoutX="367.0" layoutY="348.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="25.0" prefWidth="67.0" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="SAVE" textFill="WHITE" />
+      <Label layoutX="266.0" layoutY="23.0" text="Employee Salary Management" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial Black" size="40.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../assets/cssSheets/MetropolitantColourSchema.css" />
+            <URL value="@../assets/cssSheets/style.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="borderRadious" />
+            <String fx:value="topPaneBackgroundcolor" />
+         </styleClass>
+      </Label>
+      <Label layoutX="62.0" layoutY="116.0" prefHeight="22.0" prefWidth="209.0" text="Salary ID                           : " textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="166.0" prefHeight="22.0" prefWidth="210.0" text="Employee ID                      : " textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="269.0" prefHeight="22.0" prefWidth="212.0" text="Employee Designation      : " textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="312.0" prefHeight="22.0" prefWidth="215.0" text="Employee Salary                : " textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClear" layoutX="451.0" layoutY="349.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="25.0" prefWidth="67.0" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="CLEAR" textFill="WHITE" />
+      <TableView fx:id="tblSalary" editable="true" layoutX="60.0" layoutY="424.0" prefHeight="274.0" prefWidth="1046.0" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css">
+        <columns>
+          <TableColumn fx:id="cloSalID" editable="false" prefWidth="174.0" text="Sal ID" />
+          <TableColumn fx:id="colEID" prefWidth="174.0" text="EID" />
+            <TableColumn fx:id="colSalDate" prefWidth="174.0" text="Salary Date" />
+            <TableColumn fx:id="colDesignation" prefWidth="174.0" text="Designation" />
+            <TableColumn fx:id="colSalary" prefWidth="174.0" text="Salary" />
+            <TableColumn fx:id="colDelete" prefWidth="174.0" text="Delete" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="62.0" layoutY="392.0" prefHeight="25.0" prefWidth="170.0" promptText="Search" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" />
+      <ImageView fitHeight="22.0" fitWidth="23.0" layoutX="203.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons/icons8-search-windows-11-color/icons8-search-96.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbEID" layoutX="272.0" layoutY="166.0" prefHeight="25.0" prefWidth="255.0" promptText="EID" styleClass="textField" />
+      <ImageView blendMode="MULTIPLY" cache="true" cacheHint="SPEED" depthTest="ENABLE" fitHeight="137.0" fitWidth="233.0" layoutX="742.0" layoutY="146.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/icons/icons8-cash.gif" />
+         </image>
+         <effect>
+            <Glow level="0.46" />
+         </effect>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="218.0" prefHeight="22.0" prefWidth="210.0" text="Salary Date" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateSalDate" layoutX="274.0" layoutY="217.0" prefHeight="25.0" prefWidth="255.0" />
+   </children>
+</AnchorPane>

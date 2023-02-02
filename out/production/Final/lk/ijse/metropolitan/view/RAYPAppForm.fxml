@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneAppoint" prefHeight="722.0" prefWidth="1166.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.RAYPAppFormController">
+   <children>
+      <Label layoutX="290.0" layoutY="23.0" prefHeight="59.0" prefWidth="621.0" styleClass="topPaneBackgroundcolor" text="RAYP APPOINTMENT FORM" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial Black" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="152.0" text="RID  :" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRID" layoutX="137.0" layoutY="151.0" prefHeight="25.0" prefWidth="147.0" promptText="RID" styleClass="textField" />
+      <Label layoutX="381.0" layoutY="154.0" text="Customer ID :" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+       <TextField fx:id="txtCID" layoutX="510.0" layoutY="152.0" onAction="#cidOnAction" prefHeight="27.0" prefWidth="147.0" promptText="CID" styleClass="textField" />
+      <Label layoutX="752.0" layoutY="154.0" text="Appointed Employee  :" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+       <ComboBox fx:id="cmbEmployee" layoutX="962.0" layoutY="150.0" onAction="#eIdOnAction" prefHeight="27.0" prefWidth="147.0" styleClass="textField" />
+      <Label layoutX="68.0" layoutY="223.0" text="Call Date :" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateCall" layoutX="211.0" layoutY="221.0" prefHeight="25.0" prefWidth="341.0" />
+      <Label layoutX="622.0" layoutY="222.0" text="Repair Date :" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateRepair" layoutX="777.0" layoutY="221.0" prefHeight="25.0" prefWidth="341.0" />
+      <Label layoutX="68.0" layoutY="297.0" prefHeight="22.0" prefWidth="105.0" text="Description :" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+       <TableView fx:id="tblRAPApp" layoutX="63.0" layoutY="452.0" prefHeight="222.0" prefWidth="1055.0" styleClass="textField">
+           <columns>
+               <TableColumn fx:id="colRID" prefWidth="75.0" text="RID" />
+               <TableColumn fx:id="colCID" prefWidth="75.0" text="CID" />
+               <TableColumn fx:id="colCallDate" prefWidth="174.0" text="Call Date" />
+               <TableColumn fx:id="colRepDate" prefWidth="174.0" text="App: Date" />
+               <TableColumn fx:id="colDesc" prefWidth="310.0" text="Description" />
+               <TableColumn fx:id="colEID" prefWidth="75.0" text="App: Emp:" />
+               <TableColumn fx:id="colDelete" prefWidth="174.0" text="Delete" />
+           </columns>
+       </TableView>
+       <Button fx:id="btnAdd" layoutX="918.0" layoutY="361.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="27.0" prefWidth="58.0" text="ADD" textFill="WHITE">
+           <styleClass>
+               <String fx:value="my-btn-class" />
+               <String fx:value="textField" />
+           </styleClass>
+       </Button>
+       <Button fx:id="btnClear" layoutX="997.0" layoutY="361.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="27.0" prefWidth="58.0" text="CLEAR">
+           <styleClass>
+               <String fx:value="my-btn-class" />
+               <String fx:value="textField" />
+           </styleClass>
+       </Button>
+      <TextField fx:id="txtDescription" layoutX="216.0" layoutY="290.0" onAction="#addAppOnAction" prefHeight="42.0" prefWidth="341.0" />
+   </children>
+</AnchorPane>
