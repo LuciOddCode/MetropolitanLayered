@@ -1,4 +1,6 @@
 package lk.ijse.metropolitan.bo.custom;
 
-public interface CustomerBO {
+import lk.ijse.metropolitan.bo.SuperBO;
+
+public interface CustomerBO extends SuperBO {
 }
