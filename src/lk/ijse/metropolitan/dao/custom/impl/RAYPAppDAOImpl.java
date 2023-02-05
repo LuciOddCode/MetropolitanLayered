@@ -1,6 +1,6 @@
 package lk.ijse.metropolitan.dao.custom.impl;
 
-import lk.ijse.metropolitan.dao.SuperDAO;
+import lk.ijse.metropolitan.dao.custom.RAYPAppDAO;
 
-public class RAYPAppDAOImpl implements SuperDAO {
+public class RAYPAppDAOImpl implements RAYPAppDAO {
 }

@@ -29,7 +29,7 @@ public class DAOFactory {
             case RAYPA:
                 return new RAYPAppDAOImpl();
             case RAYPP:
-                return new RAYPPAymentDAOImpl();
+                return new RAYPPayment();
             case SALARY:
                 return new SalaryDAOImpl();
             case SUPPLIER:
@@ -37,7 +37,7 @@ public class DAOFactory {
             case STOCK:
                 return new StockDAOImpl();
             case STOCK_DETAILS:
-                return new StockDetailDAOImpl();
+                return null;
             case ORDER:
                 return new OrderDAOImpl();
             case ORDER_DETAILS:

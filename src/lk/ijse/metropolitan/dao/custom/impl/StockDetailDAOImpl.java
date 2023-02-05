@@ -1,6 +1,6 @@
 package lk.ijse.metropolitan.dao.custom.impl;
 
-import lk.ijse.metropolitan.dao.SuperDAO;
+import lk.ijse.metropolitan.dao.custom.StockDetailDAO;
 
-public class StockDetailDAOImpl implements SuperDAO {
+public class StockDetailDAOImpl implements StockDetailDAO {
 }

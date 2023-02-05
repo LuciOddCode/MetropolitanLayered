@@ -1,23 +1,24 @@
 package lk.ijse.metropolitan.dao.custom.impl;
 
-import lk.ijse.metropolitan.dao.custom.QueryDAO;
+import lk.ijse.metropolitan.dao.custom.RAYPPaymentDAO;
+import lk.ijse.metropolitan.entity.Payment;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class QueryDAOImpl implements QueryDAO {
+public class RAYPPayment implements RAYPPaymentDAO {
     @Override
-    public ArrayList getAll() throws SQLException, ClassNotFoundException {
+    public ArrayList<Payment> getAll() throws SQLException, ClassNotFoundException {
         return null;
     }
 
     @Override
-    public boolean add(Object entity) throws SQLException, ClassNotFoundException {
+    public boolean add(Payment entity) throws SQLException, ClassNotFoundException {
         return false;
     }
 
     @Override
-    public boolean update(Object entity) throws SQLException, ClassNotFoundException {
+    public boolean update(Payment entity) throws SQLException, ClassNotFoundException {
         return false;
     }
 
@@ -37,7 +38,7 @@ public class QueryDAOImpl implements QueryDAO {
     }
 
     @Override
-    public Object search(String id) throws SQLException, ClassNotFoundException {
+    public Payment search(String id) throws SQLException, ClassNotFoundException {
         return null;
     }
 }
