@@ -48,21 +48,45 @@ public class CustomerDAOImpl implements CustomerDAO {
 
     @Override
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        sql= "SELECT * FROM customer WHERE cId=?;";
+        ResultSet resultSet = CrudUtil.execute(sql, id);
+        return resultSet.next();
     }
 
     @Override
     public String generateNewID() throws SQLException, ClassNotFoundException {
-        return null;
+        sql = "SELECT cId FROM customer ORDER BY cId DESC LIMIT 1;";
+        ResultSet rst = CrudUtil.execute(sql);
+        if (rst.next()) {
+            String id = rst.getString("cId");
+            int newCustomerId = Integer.parseInt(id.replace("C00-", "")) + 1;
+            return String.format("C00-%03d", newCustomerId);
+        } else {
+            return "C00-001";
+
+        }
     }
 
     @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        String sql = "DELETE FROM customer WHERE cId=?;";
+        return  CrudUtil.execute(sql, id);
     }
 
     @Override
     public Customer search(String id) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT  * FROM Customer WHERE name LIKE ?";
+        ResultSet result = CrudUtil.execute(sql, id);
+        if (result.next()) {
+            return new Customer(
+                    result.getString(1),
+                    result.getString(2),
+                    result.getString(3),
+                    result.getString(4),
+                    result.getString(5),
+                    result.getString(6)
+            );
+        }
         return null;
     }
 }
