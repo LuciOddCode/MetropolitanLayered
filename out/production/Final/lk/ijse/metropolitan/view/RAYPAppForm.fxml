@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -8,10 +9,12 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paneAppoint" prefHeight="722.0" prefWidth="1166.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.RAYPAppFormController">
+<AnchorPane fx:id="paneAppoint" prefHeight="722.0" prefWidth="1166.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.RAYPAppFormController">
    <children>
       <Label layoutX="290.0" layoutY="23.0" prefHeight="59.0" prefWidth="621.0" styleClass="topPaneBackgroundcolor" text="RAYP APPOINTMENT FORM" textFill="WHITE" underline="true">
          <font>
@@ -57,11 +60,10 @@
            <columns>
                <TableColumn fx:id="colRID" prefWidth="75.0" text="RID" />
                <TableColumn fx:id="colCID" prefWidth="75.0" text="CID" />
-               <TableColumn fx:id="colCallDate" prefWidth="174.0" text="Call Date" />
+               <TableColumn fx:id="colCallDate" prefWidth="218.0" text="Call Date" />
                <TableColumn fx:id="colRepDate" prefWidth="174.0" text="App: Date" />
-               <TableColumn fx:id="colDesc" prefWidth="310.0" text="Description" />
-               <TableColumn fx:id="colEID" prefWidth="75.0" text="App: Emp:" />
-               <TableColumn fx:id="colDelete" prefWidth="174.0" text="Delete" />
+               <TableColumn fx:id="colDesc" prefWidth="374.0" text="Description" />
+               <TableColumn fx:id="colEID" prefWidth="137.0" text="App: Emp:" />
            </columns>
        </TableView>
        <Button fx:id="btnAdd" layoutX="918.0" layoutY="361.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="27.0" prefWidth="58.0" text="ADD" textFill="WHITE">
@@ -70,12 +72,23 @@
                <String fx:value="textField" />
            </styleClass>
        </Button>
-       <Button fx:id="btnClear" layoutX="997.0" layoutY="361.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="27.0" prefWidth="58.0" text="CLEAR">
+       <Button fx:id="btnClear" layoutX="997.0" layoutY="361.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="27.0" prefWidth="58.0" text="CLEAR" textFill="WHITE">
            <styleClass>
                <String fx:value="my-btn-class" />
                <String fx:value="textField" />
            </styleClass>
        </Button>
       <TextField fx:id="txtDescription" layoutX="216.0" layoutY="290.0" onAction="#addAppOnAction" prefHeight="42.0" prefWidth="341.0" />
+      <TextField fx:id="txtSearch" layoutX="63.0" layoutY="400.0" onAction="#searchOnAction" onInputMethodTextChanged="#searchOnChanges" prefHeight="25.0" prefWidth="170.0" promptText="Search" styleClass="textField">
+         <stylesheets>
+            <URL value="@../assets/cssSheets/style.css" />
+            <URL value="@../assets/cssSheets/MetropolitantColourSchema.css" />
+         </stylesheets>
+      </TextField>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="205.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons/icons8-search-windows-11-color/icons8-search-96.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

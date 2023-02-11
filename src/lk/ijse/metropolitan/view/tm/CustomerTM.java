@@ -8,18 +8,18 @@ public class CustomerTM {
     private String email;
     private String address;
     private String phone;
-    private Button delete;
+
 
     public CustomerTM() {
     }
 
-    public CustomerTM(String cId, String name, String email, String address, String phone, Button delete) {
+    public CustomerTM(String cId, String name, String email, String address, String phone) {
         this.cId = cId;
         this.name = name;
         this.email = email;
         this.address = address;
         this.phone = phone;
-        this.delete = delete;
+
     }
 
     public String getcId() {
@@ -62,13 +62,6 @@ public class CustomerTM {
         this.phone = phone;
     }
 
-    public Button getDelete() {
-        return delete;
-    }
-
-    public void setDelete(Button delete) {
-        this.delete = delete;
-    }
 
     @Override
     public String toString() {
@@ -78,7 +71,6 @@ public class CustomerTM {
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
-                ", delete=" + delete +
                 '}';
     }
 }

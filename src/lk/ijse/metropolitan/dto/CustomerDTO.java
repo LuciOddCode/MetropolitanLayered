@@ -6,16 +6,26 @@ public class CustomerDTO {
     private String address;
     private String email;
     private String phone;
+    private String eId;
 
     public CustomerDTO() {
     }
 
-    public CustomerDTO(String cId, String name, String address, String email, String phone) {
+    public CustomerDTO(String cId, String name, String address, String email, String phone, String eId) {
         this.cId = cId;
         this.name = name;
         this.address = address;
         this.email = email;
         this.phone = phone;
+        this.eId = eId;
+    }
+
+    public String geteId() {
+        return eId;
+    }
+
+    public void seteId(String eId) {
+        this.eId = eId;
     }
 
     public String getcId() {
@@ -66,6 +76,7 @@ public class CustomerDTO {
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", eId='" + eId + '\'' +
                 '}';
     }
 }

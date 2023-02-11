@@ -1,27 +1,28 @@
 package lk.ijse.metropolitan.view.tm;
 
+import javafx.beans.InvalidationListener;
+import javafx.collections.ArrayChangeListener;
+import javafx.collections.ObservableArray;
 import javafx.scene.control.Button;
 
 import java.time.LocalDate;
 
-public class EmployeeTM {
+public class EmployeeTM implements ObservableArray<EmployeeTM> {
     private String eId;
     private String name;
     private String phone;
-    private LocalDate dob;
+    private String dob;
     private String email;
-    private Button delete;
 
     public EmployeeTM() {
     }
 
-    public EmployeeTM(String eId, String name, String phone, LocalDate dob, String email, Button delete) {
+    public EmployeeTM(String eId, String name, String phone, String dob, String email) {
         this.eId = eId;
         this.name = name;
         this.phone = phone;
         this.dob = dob;
         this.email = email;
-        this.delete = delete;
     }
 
     public String geteId() {
@@ -48,11 +49,11 @@ public class EmployeeTM {
         this.phone = phone;
     }
 
-    public LocalDate getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(LocalDate dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
@@ -64,13 +65,8 @@ public class EmployeeTM {
         this.email = email;
     }
 
-    public Button getDelete() {
-        return delete;
-    }
 
-    public void setDelete(Button delete) {
-        this.delete = delete;
-    }
+
 
     @Override
     public String toString() {
@@ -80,7 +76,51 @@ public class EmployeeTM {
                 ", phone='" + phone + '\'' +
                 ", dob=" + dob +
                 ", email='" + email + '\'' +
-                ", delete=" + delete +
                 '}';
+    }
+
+    @Override
+    public void addListener(ArrayChangeListener<EmployeeTM> listener) {
+
+    }
+
+    @Override
+    public void removeListener(ArrayChangeListener<EmployeeTM> listener) {
+
+    }
+
+    @Override
+    public void resize(int size) {
+
+    }
+
+    @Override
+    public void ensureCapacity(int capacity) {
+
+    }
+
+    @Override
+    public void trimToSize() {
+
+    }
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
+    public void addListener(InvalidationListener listener) {
+
+    }
+
+    @Override
+    public void removeListener(InvalidationListener listener) {
+
     }
 }

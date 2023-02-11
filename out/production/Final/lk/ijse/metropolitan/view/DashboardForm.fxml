@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="paneMain" prefHeight="768.0" prefWidth="1366.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.DashboardFormController">
+<AnchorPane fx:id="paneMain" prefHeight="768.0" prefWidth="1366.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.DashboardFormController">
     <children>
         <AnchorPane fx:id="paneLoad" layoutX="197.0" layoutY="49.0" prefHeight="722.0" prefWidth="1166.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -18,27 +18,27 @@
                   <Font name="Arial Black" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="596.0" layoutY="454.0" text="Our Vision">
+            <Label layoutX="592.0" layoutY="397.0" text="Our Vision">
                <font>
                   <Font name="Calibri Bold Italic" size="20.0" />
                </font>
             </Label>
-            <Text fontSmoothingType="LCD" layoutX="596.0" layoutY="504.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our vision is to build and secure a leading position in the expanding ICT industry by providing best- of-breed products and services to enable our partners and customers to compete effectively using the latest technologies" underline="true" wrappingWidth="260.0">
+            <Text fontSmoothingType="LCD" layoutX="592.0" layoutY="447.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our vision is to build and secure a leading position in the expanding ICT industry by providing best- of-breed products and services to enable our partners and customers to compete effectively using the latest technologies" underline="true" wrappingWidth="260.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Label layoutX="60.0" layoutY="454.0" text="Our Mission">
+            <Label layoutX="56.0" layoutY="397.0" text="Our Mission">
                <font>
                   <Font name="Calibri Bold Italic" size="20.0" />
                </font>
             </Label>
-            <Text fontSmoothingType="LCD" layoutX="61.0" layoutY="504.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer Services is focusing on becoming a highly credible and productive Information Technology service company backed by customer care." underline="true" wrappingWidth="260.0">
+            <Text fontSmoothingType="LCD" layoutX="57.0" layoutY="447.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer Services is focusing on becoming a highly credible and productive Information Technology service company backed by customer care." underline="true" wrappingWidth="260.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Label layoutX="18.0" layoutY="687.0" styleClass="specialTextColour" text="Let's Make Everyones Dream PC Real " textFill="#fcfcfc">
+            <Label layoutX="14.0" layoutY="630.0" styleClass="specialTextColour" text="Let's Make Everyones Dream PC Real " textFill="#fcfcfc">
                <font>
                   <Font name="Calibri Bold Italic" size="24.0" />
                </font>
@@ -191,7 +191,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button fx:id="btnSignOut" alignment="CENTER" layoutX="2.0" layoutY="671.0" mnemonicParsing="false" onAction="#signOutOnAction" prefHeight="45.0" prefWidth="195.0" text="SIGN OUT" textFill="WHITE">
+                <Button fx:id="btnSignOut" alignment="CENTER" layoutX="2.0" layoutY="611.0" mnemonicParsing="false" onAction="#signOutOnAction" prefHeight="45.0" prefWidth="195.0" text="SIGN OUT" textFill="WHITE">
                     <font>
                         <Font name="Arial Black" size="12.0" />
                     </font>

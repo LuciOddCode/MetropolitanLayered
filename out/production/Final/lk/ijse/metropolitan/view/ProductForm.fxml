@@ -12,40 +12,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paneProduct" prefHeight="722.0" prefWidth="1166.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.ProductFormController">
+<AnchorPane fx:id="paneProduct" prefHeight="722.0" prefWidth="1166.0" styleClass="backgroundcolor" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.metropolitan.controller.ProductFormController">
     <children>
-        <TextField fx:id="txtPID" layoutX="190.0" layoutY="113.0" prefHeight="25.0" prefWidth="98.0" promptText="PID"
-                   styleClass="textField">
+        <TextField fx:id="txtPID" layoutX="190.0" layoutY="113.0" prefHeight="25.0" prefWidth="98.0" promptText="PID" styleClass="textField">
             <stylesheets>
-                <URL value="@../assets/cssSheets/style.css"/>
-                <URL value="@../assets/cssSheets/MetropolitantColourSchema.css"/>
+                <URL value="@../assets/cssSheets/style.css" />
+                <URL value="@../assets/cssSheets/MetropolitantColourSchema.css" />
             </stylesheets>
         </TextField>
-        <TextField fx:id="txtType" layoutX="231.0" layoutY="177.0" onAction="#typeOnAction" prefHeight="25.0"
-                   prefWidth="275.0" promptText="Type" styleClass="textField"
-                   stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css"/>
-        <TextField fx:id="txtBrand" layoutX="829.0" layoutY="175.0" onAction="#brandOnAction" prefHeight="25.0"
-                   prefWidth="254.0" promptText="Brand" styleClass="textField"/>
-        <TextField fx:id="txtDesc" layoutX="231.0" layoutY="237.0" onAction="#descOnAction" prefHeight="25.0"
-                   prefWidth="276.0" promptText="Description" styleClass="textField"/>
-        <TextField fx:id="txtQty" layoutX="830.0" layoutY="236.0" onAction="#qtyOnAction" prefHeight="25.0"
-                   prefWidth="254.0" promptText="Qty On Hand" styleClass="textField"/>
-        <Button fx:id="btnAdd" layoutX="908.0" layoutY="366.0" mnemonicParsing="false" onAction="#addOnAction"
-                prefHeight="25.0" prefWidth="67.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css"
-                text="ADD" textFill="WHITE">
+        <TextField fx:id="txtType" layoutX="231.0" layoutY="177.0" onAction="#typeOnAction" prefHeight="25.0" prefWidth="275.0" promptText="Type" styleClass="textField" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" />
+        <TextField fx:id="txtBrand" layoutX="829.0" layoutY="175.0" onAction="#brandOnAction" prefHeight="25.0" prefWidth="254.0" promptText="Brand" styleClass="textField" />
+        <TextField fx:id="txtDesc" layoutX="231.0" layoutY="237.0" onAction="#descOnAction" prefHeight="25.0" prefWidth="276.0" promptText="Description" styleClass="textField" />
+        <TextField fx:id="txtQty" layoutX="830.0" layoutY="236.0" onAction="#qtyOnAction" prefHeight="25.0" prefWidth="254.0" promptText="Qty On Hand" styleClass="textField" />
+        <Button fx:id="btnAdd" layoutX="908.0" layoutY="366.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="25.0" prefWidth="67.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="ADD" textFill="WHITE">
             <styleClass>
-                <String fx:value="my-btn-class"/>
-                <String fx:value="textField"/>
+                <String fx:value="my-btn-class" />
+                <String fx:value="textField" />
             </styleClass>
         </Button>
-        <Label layoutX="330.0" layoutY="23.0" styleClass="topPaneBackgroundcolor" text="Product Management"
-               textAlignment="CENTER" textFill="WHITE" underline="true">
+        <Label layoutX="330.0" layoutY="23.0" styleClass="topPaneBackgroundcolor" text="Product Management" textAlignment="CENTER" textFill="WHITE" underline="true">
             <font>
-                <Font name="Arial Black" size="40.0"/>
+                <Font name="Arial Black" size="40.0" />
             </font>
             <stylesheets>
-                <URL value="@../assets/cssSheets/MetropolitantColourSchema.css"/>
-                <URL value="@../assets/cssSheets/style.css"/>
+                <URL value="@../assets/cssSheets/MetropolitantColourSchema.css" />
+                <URL value="@../assets/cssSheets/style.css" />
             </stylesheets>
         </Label>
         <Label layoutX="61.0" layoutY="116.0" prefHeight="22.0" prefWidth="112.0" text="Product ID : " textFill="WHITE">
@@ -63,60 +54,49 @@
             <Font name="Arial Black" size="14.0" />
          </font>
       </Label>
-        <Label layoutX="63.0" layoutY="237.0" prefHeight="22.0" prefWidth="169.0" text="Product Description : "
-               textFill="WHITE">
+        <Label layoutX="63.0" layoutY="237.0" prefHeight="22.0" prefWidth="169.0" text="Product Description : " textFill="WHITE">
             <font>
-                <Font name="Arial Black" size="14.0"/>
+                <Font name="Arial Black" size="14.0" />
             </font>
         </Label>
-        <Label layoutX="661.0" layoutY="238.0" prefHeight="22.0" prefWidth="169.0" text="Quantity On Hand :"
-               textFill="WHITE">
+        <Label layoutX="661.0" layoutY="238.0" prefHeight="22.0" prefWidth="169.0" text="Quantity On Hand :" textFill="WHITE">
             <font>
-                <Font name="Arial Black" size="14.0"/>
+                <Font name="Arial Black" size="14.0" />
             </font>
         </Label>
-        <Button fx:id="btnClear" layoutX="991.0" layoutY="366.0" mnemonicParsing="false" onAction="#clearOnAction"
-                prefHeight="25.0" prefWidth="67.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css"
-                text="CLEAR" textFill="WHITE">
+        <Button fx:id="btnClear" layoutX="991.0" layoutY="366.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="67.0" stylesheets="@../assets/cssSheets/MetropolitantColourSchema.css" text="CLEAR" textFill="WHITE">
             <styleClass>
-                <String fx:value="my-btn-class"/>
-                <String fx:value="textField"/>
+                <String fx:value="my-btn-class" />
+                <String fx:value="textField" />
             </styleClass>
         </Button>
-        <TableView fx:id="tblProduct" editable="true" layoutX="60.0" layoutY="413.0" prefHeight="274.0"
-                   prefWidth="1046.0" styleClass="textField">
+        <TableView fx:id="tblProduct" editable="true" layoutX="60.0" layoutY="413.0" prefHeight="274.0" prefWidth="1046.0" styleClass="textField">
             <columns>
-                <TableColumn fx:id="colPid" editable="false" prefWidth="100.0" text="PID"/>
-                <TableColumn fx:id="colType" prefWidth="140.0" text="Type"/>
-                <TableColumn fx:id="colBrand" prefWidth="150.0" text="Brand"/>
-                <TableColumn fx:id="colDesc" prefWidth="150.0" text="Description"/>
-                <TableColumn fx:id="colQty" prefWidth="100.0" text="Qty On Hand"/>
-                <TableColumn fx:id="colBuy" prefWidth="150.0" text="Buying Price"/>
-                <TableColumn fx:id="colSell" prefWidth="150.0" text="Selling Price"/>
-                <TableColumn fx:id="colDel" prefWidth="106.0" text="Delete"/>
+                <TableColumn fx:id="colPid" editable="false" prefWidth="100.0" text="PID" />
+                <TableColumn fx:id="colType" prefWidth="140.0" text="Type" />
+                <TableColumn fx:id="colBrand" prefWidth="150.0" text="Brand" />
+                <TableColumn fx:id="colDesc" prefWidth="230.0" text="Description" />
+                <TableColumn fx:id="colQty" prefWidth="105.0" text="Qty On Hand" />
+                <TableColumn fx:id="colBuy" prefWidth="155.0" text="Buying Price" />
+                <TableColumn fx:id="colSell" prefWidth="158.0" text="Selling Price" />
             </columns>
         </TableView>
-        <TextField fx:id="txtSearch" layoutX="60.0" layoutY="386.0" prefHeight="25.0" prefWidth="170.0"
-                   promptText="Search" styleClass="textField">
+        <TextField fx:id="txtSearch" layoutX="60.0" layoutY="386.0" onAction="#searchOnAction" prefHeight="25.0" prefWidth="170.0" promptText="Search" styleClass="textField">
             <stylesheets>
-                <URL value="@../assets/cssSheets/style.css"/>
-                <URL value="@../assets/cssSheets/MetropolitantColourSchema.css"/>
+                <URL value="@../assets/cssSheets/style.css" />
+                <URL value="@../assets/cssSheets/MetropolitantColourSchema.css" />
             </stylesheets>
         </TextField>
-        <TextField fx:id="txtBuy" layoutX="232.0" layoutY="296.0" onAction="#buyingOnAction" prefHeight="25.0"
-                   prefWidth="276.0" promptText="Buying" styleClass="textField"/>
-        <TextField fx:id="txtSell" layoutX="832.0" layoutY="295.0" onAction="#sellingOnAction" prefHeight="25.0"
-                   prefWidth="254.0" promptText="Selling" styleClass="textField"/>
-        <Label layoutX="64.0" layoutY="296.0" prefHeight="22.0" prefWidth="169.0" text="Buying Price             : "
-               textFill="WHITE">
+        <TextField fx:id="txtBuy" layoutX="232.0" layoutY="296.0" onAction="#buyingOnAction" prefHeight="25.0" prefWidth="276.0" promptText="Buying" styleClass="textField" />
+        <TextField fx:id="txtSell" layoutX="832.0" layoutY="295.0" onAction="#sellingOnAction" prefHeight="25.0" prefWidth="254.0" promptText="Selling" styleClass="textField" />
+        <Label layoutX="64.0" layoutY="296.0" prefHeight="22.0" prefWidth="169.0" text="Buying Price             : " textFill="WHITE">
             <font>
-                <Font name="Arial Black" size="14.0"/>
+                <Font name="Arial Black" size="14.0" />
             </font>
         </Label>
-        <Label layoutX="660.0" layoutY="297.0" prefHeight="22.0" prefWidth="169.0" text="Selling Price          :"
-               textFill="WHITE">
+        <Label layoutX="660.0" layoutY="297.0" prefHeight="22.0" prefWidth="169.0" text="Selling Price          :" textFill="WHITE">
             <font>
-                <Font name="Arial Black" size="14.0"/>
+                <Font name="Arial Black" size="14.0" />
             </font>
         </Label>
       <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="203.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">

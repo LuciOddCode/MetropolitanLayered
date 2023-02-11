@@ -9,20 +9,19 @@ public class CheckOutTM {
     private String description;
     private double qty;
     private double price;
-    private Button delete;
 
     public CheckOutTM() {
 
     }
 
-    public CheckOutTM(String code, String type, String brand, String description, double qty, double price, Button delete) {
+    public CheckOutTM(String code, String type, String brand, String description, double qty, double price ){
         this.code = code;
         this.type = type;
         this.brand = brand;
         this.description = description;
         this.qty = qty;
         this.price = price;
-        this.delete = delete;
+
     }
 
     public String getCode() {
@@ -73,13 +72,6 @@ public class CheckOutTM {
         this.price = price;
     }
 
-    public Button getDelete() {
-        return delete;
-    }
-
-    public void setDelete(Button delete) {
-        this.delete = delete;
-    }
 
     @Override
     public String toString() {
@@ -90,7 +82,6 @@ public class CheckOutTM {
                 ", description='" + description + '\'' +
                 ", qty=" + qty +
                 ", price=" + price +
-                ", delete=" + delete +
                 '}';
     }
 }

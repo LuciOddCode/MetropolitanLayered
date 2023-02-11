@@ -10,12 +10,12 @@ public class ProductTM {
     private double qtyOnHand;
     private double buyingPrice;
     private double sellingPrice;
-    private Button delete;
+
 
     public ProductTM() {
     }
 
-    public ProductTM(String pId, String type, String brand, String description, double qtyOnHand, double buyingPrice, double sellingPrice, Button delete) {
+    public ProductTM(String pId, String type, String brand, String description, double qtyOnHand, double buyingPrice, double sellingPrice) {
         this.pId = pId;
         this.type = type;
         this.brand = brand;
@@ -23,7 +23,7 @@ public class ProductTM {
         this.qtyOnHand = qtyOnHand;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
-        this.delete = delete;
+
     }
 
     public String getpId() {
@@ -82,13 +82,6 @@ public class ProductTM {
         this.sellingPrice = sellingPrice;
     }
 
-    public Button getDelete() {
-        return delete;
-    }
-
-    public void setDelete(Button delete) {
-        this.delete = delete;
-    }
 
     @Override
     public String toString() {
@@ -100,7 +93,6 @@ public class ProductTM {
                 ", qtyOnHand=" + qtyOnHand +
                 ", buyingPrice=" + buyingPrice +
                 ", sellingPrice=" + sellingPrice +
-                ", delete=" + delete +
                 '}';
     }
 }

@@ -75,7 +75,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
     @Override
     public Customer search(String id) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT  * FROM Customer WHERE name LIKE ?";
+        String sql = "SELECT  * FROM customer WHERE cId LIKE ?";
         ResultSet result = CrudUtil.execute(sql, id);
         if (result.next()) {
             return new Customer(
